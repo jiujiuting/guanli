@@ -26,11 +26,12 @@
         <div class="mbx">|||</div>
         <el-menu
           background-color="#373d41"
+          active-text-color="#e84133"
           text-color="#fff"
           unique-opened
           :router="true"
         >
-          <el-submenu index="1">
+          <el-submenu index="1" >
             <template #title><i class="el-icon-s-custom"></i>用户管理</template>
             <el-menu-item index="/home/userslist"
               ><span class="el-icon-menu"></span>用户列表</el-menu-item
@@ -51,19 +52,19 @@
             <template #title
               ><i class="el-icon-s-cooperation"></i>商品管理</template
             >
-            <el-menu-item index="3-1"
+            <el-menu-item index="/home/productlist"
               ><span class="el-icon-menu"></span>商品列表</el-menu-item
             >
-            <el-menu-item index="3-2"
+            <el-menu-item index="/home/classification"
               ><span class="el-icon-menu"></span>分类参数</el-menu-item
             >
-            <el-menu-item index="3-2"
+            <el-menu-item index="/home/goodscategory"
               ><span class="el-icon-menu"></span>商品分类</el-menu-item
             >
           </el-submenu>
           <el-submenu index="4">
             <template #title><i class="el-icon-s-order"></i>订单管理</template>
-            <el-menu-item index="4-1"
+            <el-menu-item index="/home/orderlist"
               ><span class="el-icon-menu"></span>订单列表</el-menu-item
             >
           </el-submenu>
@@ -71,7 +72,7 @@
             <template #title
               ><i class="el-icon-s-platform"></i>数据统计</template
             >
-            <el-menu-item index="5-1"
+            <el-menu-item index="/home/datareport"
               ><span class="el-icon-menu"></span>数据报表</el-menu-item
             >
           </el-submenu>

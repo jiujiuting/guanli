@@ -137,6 +137,8 @@ export default {
 .ssbtn {
   background-color: #f5f7fa;
   margin-right: 10px;
+  width: 56px !important;
+  height: 39px !important;
 }
 .el-row {
   margin-bottom: 10px;
@@ -144,18 +146,18 @@ export default {
 .el-table {
   margin-bottom: 20px;
 }
-/deep/ .tianjia{
+:deep(.tianjia) {
   width: 98px !important;
   height: 40px !important;
 }
-/deep/ .el-button {
+:deep(.el-button) {
   width: 44px;
   height: 28px;
   padding: 0;
   text-align: center;
   border: none;
 }
-/deep/ .el-icon-edit {
+:deep(.el-icon-edit) {
   font-size: 12px;
 }
 
