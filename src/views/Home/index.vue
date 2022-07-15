@@ -22,16 +22,17 @@
     <!-- 下部分 -->
     <el-container>
       <!-- 左侧菜单 -->
-      <el-aside width="200px">
-        <div class="mbx">|||</div>
+      <el-aside :width="isCollapse ? '64px' : '200px'">
+        <div class="mbx" @click="isCollapse = !isCollapse">|||</div>
         <el-menu
+          :collapse="isCollapse"
           background-color="#373d41"
           active-text-color="#e84133"
           text-color="#fff"
           unique-opened
           :router="true"
         >
-          <el-submenu index="1" >
+          <el-submenu index="1">
             <template #title><i class="el-icon-s-custom"></i>用户管理</template>
             <el-menu-item index="/home/userslist"
               ><span class="el-icon-menu"></span>用户列表</el-menu-item
@@ -94,6 +95,7 @@ export default {
   },
   data () {
     return {
+      isCollapse: false
     }
   },
   // 退出功能
@@ -153,4 +155,5 @@ export default {
   font-weight: 800;
   color: #fff;
 }
+
 </style>

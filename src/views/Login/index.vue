@@ -1,6 +1,7 @@
 <template>
   <div class="login-container">
     <div class="form-box">
+      <p class="p">后台管理</p>
       <el-form :model="loginForm" :rules="rules" ref="loginFormRef">
         <el-form-item prop="username">
           <el-input
@@ -79,10 +80,19 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.p{
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+  margin: 0 auto;
+  font-family: '华文彩云';
+}
 .login-container {
+  text-align: center;
   width: 100vw;
   height: 100vh;
-  background-color: #2a4b6a;
+  background: url('@/assets/36ea399b2afb4b38bcfd1dc48a6eee05.png') no-repeat center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +100,6 @@ export default {
     width: 450px;
     height: 240px;
     padding: 30px 15px;
-    background-color: #fff;
     .btn-item {
       text-align: right;
     }
