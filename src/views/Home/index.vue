@@ -101,7 +101,7 @@ export default {
   // 退出功能
   methods: {
     btndel () {
-      localStorage.removeItem('TOKEN')
+      this.$store.commit('loginFn', '')
       this.$router.push('/login')
     }
   },
