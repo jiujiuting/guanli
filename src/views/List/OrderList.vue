@@ -1,5 +1,7 @@
 <template>
-  <div>订单列表</div>
+  <div>
+    <BreadCrumbs two="订单管理" three="订单列表"></BreadCrumbs>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
 <div>
-    商品分类
+    <BreadCrumbs two="商品管理" three="商品分类"></BreadCrumbs>
 </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-  <div>数据报表</div>
+  <div>
+    <BreadCrumbs two="数据统计" three="数据报表"></BreadCrumbs>
+  </div>
 </template>
 
 <script>

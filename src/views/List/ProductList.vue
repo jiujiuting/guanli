@@ -1,5 +1,7 @@
 <template>
-  <div>商品列表</div>
+  <div>
+    <BreadCrumbs two="商品管理" three="商品列表"></BreadCrumbs>
+  </div>
 </template>
 
 <script>

@@ -12,6 +12,7 @@ export default new Vuex.Store({
   mutations: {
     loginFn (state, payload) {
       state.token = payload
+      // token 持久化本地存储
       window.localStorage.setItem('TOKEN', JSON.stringify(payload))
     }
   },

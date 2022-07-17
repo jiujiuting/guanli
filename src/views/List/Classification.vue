@@ -1,6 +1,6 @@
 <template>
 <div>
-    分类参数
+    <BreadCrumbs two="商品管理" three="分类参数"></BreadCrumbs>
 </div>
 </template>
 

@@ -4,7 +4,7 @@ import store from '@/store'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/login' },
+  { path: '/', redirect: '/home' },
   { path: '/login', component: () => import('@/views/Login') },
   {
     path: '/home',
@@ -35,7 +35,7 @@ const whiteList = ['/login', '/404'] // 白名单
 // 前置路由守卫
 router.beforeEach((to, from, next) => {
   // 查看权限
-  const token = store.state.user.token
+  const token = store.state.token
   if (token) { // 已登录
     if (to.path === '/login') { // 已登录的情况下还要去login
       next('/')
@@ -43,7 +43,7 @@ router.beforeEach((to, from, next) => {
       next()
     }
   } else { // 未登录
-    if (whiteList.includes(to.path)) { // 未登录的情况下要去白名单以外的页面
+    if (whiteList.includes(to.path)) { // 未登录的情况下要去白名单中的页面
       next()
     } else {
       next('/login')
