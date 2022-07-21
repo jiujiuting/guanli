@@ -42,7 +42,8 @@
             <template #title
               ><i class="el-icon-bank-card"></i>权限管理</template
             >
-            <el-menu-item index="/home/roleslist"
+            <el-menu-item
+              index="/home/roleslist"
               ><span class="el-icon-menu"></span>角色列表</el-menu-item
             >
             <el-menu-item index="/home/permissionslist"
@@ -155,5 +156,4 @@ export default {
   font-weight: 800;
   color: #fff;
 }
-
 </style>

@@ -57,16 +57,16 @@ export default {
       // 二次校验
       try {
         await this.$refs.loginFormRef.validate()
-        try {
-          const res = await login(this.loginForm)
-          this.token = res.data.data.token
-          this.$message.success('登录成功')
-          this.$store.commit('loginFn', res.data.data.token)
-          this.$router.push('/home')
-        } catch (err) {
-          console.log(err)
-          this.$message.error('登录失败')
-        }
+        // try {
+        const res = await login(this.loginForm)
+        this.token = res.data.data.token
+        this.$message.success('登录成功')
+        this.$store.commit('loginFn', res.data.data.token)
+        this.$router.push('/home')
+        // } catch (err) {
+        //   console.log(err)
+        //   this.$message.error('登录失败')
+        // }
       } catch (err) {
         this.$message.error('登录表单校验失败')
       }
@@ -80,18 +80,19 @@ export default {
 </script>
 
 <style scoped lang='less'>
-.p{
+.p {
   display: inline-block;
   font-size: 30px;
   color: #fff;
   margin: 0 auto;
-  font-family: '华文彩云';
+  font-family: "华文彩云";
 }
 .login-container {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background: url('@/assets/36ea399b2afb4b38bcfd1dc48a6eee05.png') no-repeat center;
+  background: url("@/assets/36ea399b2afb4b38bcfd1dc48a6eee05.png") no-repeat
+    center;
   background-size: cover;
   display: flex;
   justify-content: center;
